@@ -5,9 +5,9 @@ https://github.com/jwittbold/hadoop_streaming_mapreduce \
 This previous project utilized a series of MapReduce jobs to return records of vehicle accident reports.
 
 
-In this project we will work with the same dataset and achieve the same output, but we will be executing it with Spark while working with a Spark RDD (Resilient Distributed Dataset). This project highlights the advantages of working with Spark and the simplicity it allows for when compared to traditional MapReduce jobs. 
+In this project we will work with the same dataset and achieve the same output, but we will be executing it with Spark while working with a Spark RDD (Resilient Distributed Dataset). This project highlights the advantages of working with Spark and the simplicity it allows for as compared to traditional MapReduce jobs. 
 
-The following assumes you have a working installation of Hadoop and Spark. Please refer to the previoulsy mentioned project for info regarding setting up Hadoop. 
+The following assumes you have working installations of Hadoop and Spark. Please refer to the previoulsy mentioned project for info regarding setting up Hadoop. 
 
 ## File on HDFS
 As seen below, our data file is already present within HDFS as it was added in the previous project.\
@@ -52,16 +52,33 @@ As shown below, vehicle records are formatted as (make-year, 1)
 
 ![make_kv_after](screenshots/make_kv_after.png)
 
-
-
+## ReduceByKey 
+Using reduceByKey() method groups records by key and applies custom logic to get sum of values (the '1' in the previous step)
 ![after_reduceByKey](screenshots/after_reduceByKey.png)
 
+## Final output as string
+Our final output is cast as a string and saved to HDFS using .saveAsTextFile
 ![final_output](screenshots/final_output.png)
 
+## HDFS output directory before running script
+To view the contents: \
+```hdfs dfs -ls /output```
+HDFS output directory contains output from the previous projects MapReduce jobs.
 ![hdfs_output_dir_before](screenshots/hdfs_output_dir_before.png)
+
+## HDFS output directory after running script 
+HDFS now contains a new directory,  ```/output/make_year_count_spark``` \ 
+To view the contents: \
+```hdfs dfs -ls /output```
 
 ![hdfs_output_dir_after](screenshots/hdfs_output_dir_after.png)
 
+## Files created in HDFS '/output/make_year_count_spark'
+To view the contents of the newly created directory:\
+```hdfs dfs -ls /output/make_year_count_spark```
 ![hdfs_make_year_count_spark_dir](screenshots/hdfs_make_year_count_spark_dir.png)
+
+## Results from Spark job
+Exploring the contents of the output from the Spark job we can see that the job executed successfully and we have three accident records showing vehicle make, year and total accidents for each vehicle with an accident record.
 
 ![hdfs_cat_part-00000](screenshots/hdfs_cat_part-00000.png)
