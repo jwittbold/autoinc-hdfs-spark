@@ -21,6 +21,7 @@
 
 ![hdfs_output_dir_before](screenshots/hdfs_output_dir_before.png)
 
+![hdfs_output_dir_after](screenshots/hdfs_output_dir_after.png)
 
 ![hdfs_make_year_count_spark_dir](screenshots/hdfs_make_year_count_spark_dir.png)
 
