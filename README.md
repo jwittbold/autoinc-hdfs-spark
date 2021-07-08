@@ -27,7 +27,7 @@ We can take a look at the contents of our data file by running:\
 Within ```autoinc_spark.py``` we have built a SparkSession and using SparkContext we have created an RDD from \
 ```/input/data.csv``` 
 
-We can view the contents by collecting the raw RDD and the output will appear as seen below:
+We can view the contents by collecting the raw RDD and the output will appear as below:
 
 ![raw_rdd_collect](/screenshots/raw_rdd_collect.png)
 
@@ -36,14 +36,20 @@ We can view the contents by collecting the raw RDD and the output will appear as
 We map the ```extract_vin_kv()``` function to each element within the RDD in order to return records formated as: \
 (VIN, (incident_type, make, year)) tuple.
 
+![extract_vin_kv_after](screenshots/extract_vin_kv_after.png)
+
 ## GroupByKey, FlatMap populate_make() function
 Because only 'I' records contain full vehicle information, but we only want accident, 'A' records, we must propagate 'make' and 'year' values from 'I' to 'A' records. We can achieve this by using Sparks groupByKey() and flatMap() method to apply our populate_make() function on records sharing the same key.
-
-![extract_vin_kv_after](screenshots/extract_vin_kv_after.png)
+The result is shown below, four accident records consisting of vehilce make and year.
 
 ![enhanced_make_after](screenshots/enhanced_make_after.png)
 
+## Extract Make
+The next step creates a composite key in 'make-year' format within a tuple with the integer value of '1' for use in the next step. \
+As shown below, vehicle records are formatted as (make-year, 1)
+
 ![make_kv_after](screenshots/make_kv_after.png)
+
 
 
 ![after_reduceByKey](screenshots/after_reduceByKey.png)
