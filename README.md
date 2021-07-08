@@ -1,6 +1,15 @@
 # autoinc-hdfs-spark
 
-## 
+This project is a the follow up to a previous project located here:
+https://github.com/jwittbold/hadoop_streaming_mapreduce
+This previous project utilized a series of MapReduce jobs to return records of vehicle accident reports.
+
+
+In this project we will work with the same dataset and achieve the same output, but we will be executing it with Spark while working with a Spark RDD (Resilient Distributed Dataset). This project highlights the advantages of working with Spark and the simplicity it allows for when compared to traditional MapReduce jobs. 
+
+The following assumes you have a working installation of Hadoop and Spark. Please refer to the previoulsy mentioned project for info regarding setting up Hadoop. 
+
+
 
 ![hdfs_input_dir](/screenshots/hdfs_input_dir.png)
 
