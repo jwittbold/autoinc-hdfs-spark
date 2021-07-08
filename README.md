@@ -88,17 +88,19 @@ Exploring the contents of the output from the Spark job we can see that the job 
 ![hdfs_cat_part-00000](screenshots/hdfs_cat_part-00000.png)
 
 ## To Reproduce
-To reproduce this project please first visit the repository linked to at the at beginning of this README and again here: \
+To reproduce this project please first visit the repository linked to at the at beginning of this README and again here:\
 https://github.com/jwittbold/hadoop_streaming_mapreduce \
 Using the steps outlined there you will create the needed directories on HDFS in order to reproduce this project. 
 
 ## Run the Spark Job
-Once the HDFS directories are set-up, you can run this Spark job using the provided Shell script ```run_autoinc_spark.sh``` \
+Once the HDFS directories are set-up, you can run this Spark job using the provided Shell script:\
+```run_autoinc_spark.sh```\
+
 Within your terminal navigate to the directory containing this file and enter:\
-```sh run_autoinc_spark.sh```
+```sh run_autoinc_spark.sh```\
 
 The successful vehicle accident report will be output to HDFS seen here: \
-```hdfs dfs -cat /output/make_year_count_spark/part-00000```
+```hdfs dfs -cat /output/make_year_count_spark/part-00000```\
 
 and a file called ```job_log.txt``` will have been created in the same directory that ```run_autoinc_spark.sh``` was run from. \
 It contains the complete Spark job stacktrace as captured from STDERR and STDOUT. 
