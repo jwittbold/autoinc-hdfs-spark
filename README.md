@@ -57,7 +57,7 @@ Using reduceByKey() method groups records by key and applies custom logic to get
 ![after_reduceByKey](screenshots/after_reduceByKey.png)
 
 ## Final output as string
-Our final output is cast as a string and saved to HDFS using .saveAsTextFile
+Our final output is cast as a string and saved to HDFS using .saveAsTextFile \
 ![final_output](screenshots/final_output.png)
 
 ## HDFS output directory before running script
@@ -67,7 +67,7 @@ HDFS output directory contains output from the previous projects MapReduce jobs.
 ![hdfs_output_dir_before](screenshots/hdfs_output_dir_before.png)
 
 ## HDFS output directory after running script 
-HDFS now contains a new directory,  ```/output/make_year_count_spark``` \ 
+HDFS now contains a new directory,  ```/output/make_year_count_spark```  
 To view the contents: \
 ```hdfs dfs -ls /output```
 
