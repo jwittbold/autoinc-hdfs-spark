@@ -5,7 +5,7 @@ https://github.com/jwittbold/hadoop_streaming_mapreduce \
 This previous project utilized a series of MapReduce jobs to return records of vehicle accident reports.
 
 
-In this project we will work with the same dataset and achieve the same output, but we will be executing it with Spark while working with a Spark RDD (Resilient Distributed Dataset). This project highlights the advantages of working with Spark and the simplicity it allows for as compared to traditional MapReduce jobs. 
+In this project we will work with the same dataset and achieve the same output, but we will be executing it utilizing the Spark framework while working with a Spark RDD (Resilient Distributed Dataset). This project highlights the advantages of working with Spark and the simplicity it allows for when compared to traditional MapReduce jobs. 
 
 The following assumes you have working installations of Hadoop and Spark. Please refer to the previoulsy mentioned project for info regarding setting up Hadoop. 
 
