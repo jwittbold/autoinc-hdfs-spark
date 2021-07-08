@@ -36,6 +36,8 @@ We can view the contents by collecting the raw RDD and the output will appear as
 We map the ```extract_vin_kv()``` function to each element within the RDD in order to return records formated as: \
 (VIN, (incident_type, make, year)) tuple.
 
+## GroupByKey, FlatMap populate_make() function
+Because only 'I' records contain full vehicle information, but we only want accident, 'A' records, we must propagate 'make' and 'year' values from 'I' to 'A' records. We can achieve this by using Sparks groupByKey() and flatMap() method to apply our populate_make() function on records sharing the same key.
 
 ![extract_vin_kv_after](screenshots/extract_vin_kv_after.png)
 
