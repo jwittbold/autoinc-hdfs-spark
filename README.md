@@ -52,7 +52,7 @@ The result is shown below; four accident records consisting of vehilce make and 
 ![enhanced_make_after](screenshots/enhanced_make_after.png)
 
 ## Extract Make, map extract_make_kv() function
-The next step creates a composite key from make-year and outputs records as a tuple containing make-year and a count set to 1. \
+The next step creates a composite key from 'make' and 'year', and outputs records as a tuple containing 'make-year' and a count set to 1. \
 The count element will be used in the following reduceByKey step. 
 
 As shown below, vehicle records are formatted as (make-year, 1)
