@@ -46,8 +46,8 @@ In the next step, the ```extract_vin_kv()``` function is mapped to each element 
 ![extract_vin_kv_after](screenshots/extract_vin_kv_after.png)
 
 ## GroupByKey, FlatMap populate_make() function
-Because only 'I' records contain full vehicle information, but we only want accident 'A' records, we must propagate 'make' and 'year' values from 'I' to 'A' records. We can achieve this by using Sparks groupByKey() and flatMap() method to apply our populate_make() function on records sharing the same key.
-The result is shown below, four accident records consisting of vehilce make and year.
+Because only 'I' records contain full vehicle information, but we only want accident 'A' records, we must propagate 'make' and 'year' values from 'I' to 'A' records. This is achieved by using Spark's groupByKey() and flatMap() methods to apply our populate_make() function on records sharing the same key.
+The result is shown below; four accident records consisting of vehilce make and year.
 
 ![enhanced_make_after](screenshots/enhanced_make_after.png)
 
