@@ -33,7 +33,8 @@ We can view the contents by collecting the raw RDD and the output will appear as
 
 
 ## Mapping Values
-We map the ```extract_vin_kv()``` function to each element within the RDD in order to return the (VIN, (incident_type, make, year)) tuple.
+We map the ```extract_vin_kv()``` function to each element within the RDD in order to return records formated as: \
+(VIN, (incident_type, make, year)) tuple.
 
 
 ![extract_vin_kv_after](screenshots/extract_vin_kv_after.png)
