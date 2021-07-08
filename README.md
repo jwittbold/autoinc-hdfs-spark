@@ -1,6 +1,6 @@
 # autoinc-hdfs-spark
 
-This project is a the follow up to a previous project located here:
+This project is a the follow up to a previous project located here:\
 https://github.com/jwittbold/hadoop_streaming_mapreduce
 This previous project utilized a series of MapReduce jobs to return records of vehicle accident reports.
 
@@ -13,8 +13,8 @@ The following assumes you have a working installation of Hadoop and Spark. Pleas
 As seen below, our data file is already present within HDFS as it was added in the previous project.
 ![hdfs_input_dir](/screenshots/hdfs_input_dir.png)
 
-We can take a look at the contents of our data file by running:
-```hdfs dfs -cat ```
+We can take a look at the contents of our data file by running:\
+```hdfs dfs -cat /input/data.csv ```
 ![hdfs_data_file](/screenshots/hdfs_data_file.png)
 
 ![raw_rdd_collect](/screenshots/raw_rdd_collect.png)
