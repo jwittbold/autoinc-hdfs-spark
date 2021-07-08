@@ -15,6 +15,12 @@ As seen below, our data file is already present within HDFS as it was added in t
 
 ![hdfs_input_dir](/screenshots/hdfs_input_dir.png)
 
+## HDFS output directory before running script
+To view the contents: \
+```hdfs dfs -ls /output```
+HDFS output directory contains output from the previous projects MapReduce jobs.
+
+![hdfs_output_dir_before](screenshots/hdfs_output_dir_before.png)
 
 ## Contents of data.csv
 We can take a look at the contents of our data file by running:\
@@ -60,11 +66,6 @@ Using reduceByKey() method groups records by key and applies custom logic to get
 Our final output is cast as a string and saved to HDFS using .saveAsTextFile \
 ![final_output](screenshots/final_output.png)
 
-## HDFS output directory before running script
-To view the contents: \
-```hdfs dfs -ls /output```
-HDFS output directory contains output from the previous projects MapReduce jobs.
-![hdfs_output_dir_before](screenshots/hdfs_output_dir_before.png)
 
 ## HDFS output directory after running script 
 HDFS now contains a new directory,  ```/output/make_year_count_spark```  
@@ -76,6 +77,7 @@ To view the contents: \
 ## Files created in HDFS '/output/make_year_count_spark'
 To view the contents of the newly created directory:\
 ```hdfs dfs -ls /output/make_year_count_spark```
+
 ![hdfs_make_year_count_spark_dir](screenshots/hdfs_make_year_count_spark_dir.png)
 
 ## Results from Spark job
