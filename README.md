@@ -1,6 +1,6 @@
 # autoinc-hdfs-spark
 
-This project is a the follow up to a previous project located here:\
+This project is a follow up to a previous project located here:\
 https://github.com/jwittbold/hadoop_streaming_mapreduce \
 This previous project utilized a series of MapReduce jobs to return records of vehicle accident reports.
 
