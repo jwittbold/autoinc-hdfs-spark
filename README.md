@@ -9,14 +9,18 @@ In this project we will work with the same dataset and achieve the same output, 
 
 The following assumes you have a working installation of Hadoop and Spark. Please refer to the previoulsy mentioned project for info regarding setting up Hadoop. 
 
-
+## File on HDFS
 As seen below, our data file is already present within HDFS as it was added in the previous project.
 ![hdfs_input_dir](/screenshots/hdfs_input_dir.png)
 
+
+## Contents of data.csv
 We can take a look at the contents of our data file by running:\
 ```hdfs dfs -cat /input/data.csv ```
 ![hdfs_data_file](/screenshots/hdfs_data_file.png)
 
+
+## Raw RDD
 ![raw_rdd_collect](/screenshots/raw_rdd_collect.png)
 
 ![extract_vin_kv_after](screenshots/extract_vin_kv_after.png)
