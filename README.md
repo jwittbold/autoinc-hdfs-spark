@@ -11,16 +11,16 @@ The following assumes you have a working installation of Hadoop and Spark. Pleas
 
 ## File on HDFS
 As seen below, our data file is already present within HDFS as it was added in the previous project.\
-```hdfs dfs -ls /input```\
+```hdfs dfs -ls /input```
 
-![hdfs_input_dir](/screenshots/hdfs_input_dir.png)
+\n![hdfs_input_dir](/screenshots/hdfs_input_dir.png)
 
 
 ## Contents of data.csv
 We can take a look at the contents of our data file by running:\
-```hdfs dfs -cat /input/data.csv ```\
+```hdfs dfs -cat /input/data.csv ```
 
-![hdfs_data_file](/screenshots/hdfs_data_file.png)
+\n![hdfs_data_file](/screenshots/hdfs_data_file.png)
 
 
 ## Raw RDD
