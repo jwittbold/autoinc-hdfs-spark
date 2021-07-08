@@ -10,9 +10,11 @@ In this project we will work with the same dataset and achieve the same output, 
 The following assumes you have a working installation of Hadoop and Spark. Please refer to the previoulsy mentioned project for info regarding setting up Hadoop. 
 
 
-
+As seen below, our data file is already present within HDFS as it was added in the previous project.
 ![hdfs_input_dir](/screenshots/hdfs_input_dir.png)
 
+We can take a look at the contents of our data file by running:
+```hdfs dfs -cat ```
 ![hdfs_data_file](/screenshots/hdfs_data_file.png)
 
 ![raw_rdd_collect](/screenshots/raw_rdd_collect.png)
