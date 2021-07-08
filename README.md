@@ -93,9 +93,8 @@ https://github.com/jwittbold/hadoop_streaming_mapreduce \
 Using the steps outlined there you will create the needed directories on HDFS in order to reproduce this project. 
 
 ## Run the Spark Job
-Once the HDFS directories are set-up, you can run this Spark job using the provided Shell script \
-```run_autoinc_spark.sh``` \
-Within your terminal navigate to the directory containing this file and enter:
+Once the HDFS directories are set-up, you can run this Spark job using the provided Shell script ```run_autoinc_spark.sh``` \
+Within your terminal navigate to the directory containing this file and enter:\
 ```sh run_autoinc_spark.sh```
 
 The successful vehicle accident report will be output to HDFS seen here: \
