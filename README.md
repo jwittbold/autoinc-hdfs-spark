@@ -24,8 +24,9 @@ We can take a look at the contents of our data file by running:\
 
 
 ## Raw RDD
-Within autoinc_spark.py we have built a SparkSession and using SparkContext we have created an RDD from\
-```/input/data.csv```
+Within autoinc_spark.py we have built a SparkSession and using SparkContext we have created an RDD from \
+```/input/data.csv``` 
+
 The we can view the contents by collecting the raw RDD and the output will appear as seen below:
 ![raw_rdd_collect](/screenshots/raw_rdd_collect.png)
 
