@@ -16,9 +16,10 @@ As seen below, our data file is already present within HDFS as it was added in t
 ![hdfs_input_dir](/screenshots/hdfs_input_dir.png)
 
 ## HDFS output directory before running script
+HDFS output directory contains output from the previous projects MapReduce jobs. \
 To view the contents: \
 ```hdfs dfs -ls /output```
-HDFS output directory contains output from the previous projects MapReduce jobs.
+
 
 ![hdfs_output_dir_before](screenshots/hdfs_output_dir_before.png)
 
