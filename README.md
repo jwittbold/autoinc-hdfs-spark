@@ -47,7 +47,7 @@ In the next step, the ```extract_vin_kv()``` function is mapped to each element 
 
 ## GroupByKey, FlatMap populate_make() function
 Because only 'I' records contain full vehicle information, but we only want accident 'A' records, we must propagate 'make' and 'year' values from 'I' to 'A' records. This is achieved by using Spark's groupByKey() and flatMap() methods to apply our populate_make() function on records sharing the same key.
-The result is shown below; four accident records consisting of vehilce make and year.
+The result is shown below; four accident records consisting of vehicle make and year.
 
 ![enhanced_make_after](screenshots/enhanced_make_after.png)
 
@@ -60,7 +60,11 @@ As shown below, vehicle records are formatted as (make-year, 1)
 ![make_kv_after](screenshots/make_kv_after.png)
 
 ## ReduceByKey 
+<<<<<<< HEAD
 Using Spark's reduceByKey() method groups records by key and applies custom logic to aggregate the sum of values (the '1' in the previous step)
+=======
+Using Spark's reduceByKey() method groups records by key and applies custom logic to aggregate the sum of values (the '1' in the previous step) \
+>>>>>>> a68b9eeff8d01f64922e7460ad88b8b51476db5a
 ![after_reduceByKey](screenshots/after_reduceByKey.png)
 
 ## Final output as string
@@ -82,7 +86,7 @@ To view the contents of the newly created directory:\
 ![hdfs_make_year_count_spark_dir](screenshots/hdfs_make_year_count_spark_dir.png)
 
 ## Results from Spark job
-Exploring the contents of the output from the Spark job we can see that the job executed successfully and we have three accident records showing vehicle make, year and total accidents for each vehicle with an accident record. \
+Exploring the contents of the output from the Spark job we can see that the job executed successfully and we have three accident records showing vehicle make, year, and total accidents for each vehicle with an accident record. \
 ```hdfs dfs -cat /output/make_year_count_spark/part-00000```
 
 ![hdfs_cat_part-00000](screenshots/hdfs_cat_part-00000.png)
