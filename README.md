@@ -60,7 +60,7 @@ As shown below, vehicle records are formatted as (make-year, 1)
 ![make_kv_after](screenshots/make_kv_after.png)
 
 ## ReduceByKey 
-Using Spark's reduceByKey() method groups records by key and applies custom logic to get the sum of values (the '1' in the previous step)
+Using Spark's reduceByKey() method groups records by key and applies custom logic to aggregate the sum of values (the '1' in the previous step)
 ![after_reduceByKey](screenshots/after_reduceByKey.png)
 
 ## Final output as string
